@@ -4,7 +4,7 @@
 #include <OSCBundle.h>
 #include <OSCData.h>
 #include <Servo.h>
-
+  
 #define BUILTIN_LED 2
 #define D0 16
 #define D1 5
@@ -18,15 +18,17 @@
 #define D9 3
 #define D10 1
 
+// Connection variables
 char ssid[] = "WEARKIT";              // network name
 char pass[] = "twerkkkkkk";           // network password
 WiFiUDP Udp;                          // UDP instance
 const unsigned int localPort = 3333;  // local port to listen for UDP packets
 OSCErrorCode error;
 
-int testMessage;
+// Data variables
 char str[256];
 
+// Servo variables
 Servo myservo;  // create servo object to control a servo
 int vPosServo = 0; // position of the servo
 int vDelay = 5; // delay in ms between each rotation
@@ -79,6 +81,8 @@ void updateDelay(OSCMessage &msg) {
 }
 
 void loop() {
+
+  //READ: osc message
   OSCMessage receivedMessage;
   int size = Udp.parsePacket();
 
@@ -101,8 +105,6 @@ void loop() {
       error = receivedMessage.getError();
       Serial.print("error: ");
       Serial.println(error);
-      Serial.print("type: ");
-      Serial.println(receivedMessage.getType(0));
     }
   }
 }
