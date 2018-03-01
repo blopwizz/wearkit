@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 38.0, 78.0, 1154.0, 788.0 ],
+		"rect" : [ 38.0, 78.0, 931.0, 788.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,18 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 366.0, 435.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-118",
 					"maxclass" : "message",
@@ -264,9 +276,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 508.5, 382.0, 167.0, 22.0 ],
+					"patching_rect" : [ 508.5, 382.0, 160.0, 22.0 ],
 					"style" : "",
-					"text" : "udpsend 192.168.1.241 3333"
+					"text" : "udpsend 192.168.1.89 3333"
 				}
 
 			}
@@ -305,9 +317,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 54.0, 55.0, 122.0, 22.0 ],
+					"patching_rect" : [ 54.0, 55.0, 95.0, 22.0 ],
 					"style" : "",
-					"text" : "/vTargetPosServo $1"
+					"text" : "/vDefaultPos $1"
 				}
 
 			}
@@ -321,7 +333,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 54.0, 31.0, 50.0, 22.0 ],
+					"patching_rect" : [ 54.0, 21.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -412,6 +424,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-45", 0 ],
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
 					"source" : [ "obj-25", 0 ]
 				}
@@ -437,6 +456,13 @@
 					"destination" : [ "obj-45", 0 ],
 					"order" : 1,
 					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-104", 1 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
