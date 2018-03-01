@@ -131,7 +131,7 @@ void loop() {
   rawGyro.XAxis = correction(rawGyro.XAxis);
   rawGyro.YAxis = correction(rawGyro.YAxis);
   rawGyro.XAxis = correction(rawGyro.ZAxis);
-
+/*
   Serial.print(rawGyro.XAxis);
   Serial.print(rawGyro.YAxis);
   Serial.print(rawGyro.ZAxis);
@@ -139,15 +139,15 @@ void loop() {
   Serial.print(rawAccel.XAxis);
   Serial.print(rawAccel.YAxis);
   Serial.println(rawAccel.ZAxis);
-
+*/
   //Bundle containning the 6 raw values from MPU6050
   OSCBundle bundle;
-  bundle.add("/vAccelX/0").add(rawAccel.XAxis);
-  bundle.add("/vAccelY/1").add(rawAccel.YAxis);
-  bundle.add("/vAccelZ/2").add(rawAccel.ZAxis);
-  bundle.add("/vGyroX/3").add(rawGyro.XAxis);
-  bundle.add("/vGyroY/4").add(rawGyro.YAxis);
-  bundle.add("/vGyroZ/5").add(rawGyro.ZAxis);
+  bundle.add("/vAccelX").add(rawAccel.XAxis);
+  bundle.add("/vAccelY").add(rawAccel.YAxis);
+  bundle.add("/vAccelZ").add(rawAccel.ZAxis);
+  bundle.add("/vGyroX").add(rawGyro.XAxis);
+  bundle.add("/vGyroY").add(rawGyro.YAxis);
+  bundle.add("/vGyroZ").add(rawGyro.ZAxis);
 
   Udp.beginPacket(outIp, outPort);
   bundle.send(Udp);
