@@ -20,14 +20,18 @@
 #define D9 3
 #define D10 1
 
-// Wave states
+// sMotion : state of motion
+#define FOLLOWING_TARGET 1
+#define REACHED_TARGET 0
+
+// sWave : state of wave pattern
 #define NOT_RUNNING 0
 #define GOING_UP 1
 #define GOING_DOWN 2
 
-// Servo states
-#define FOLLOWING_TARGET 1
-#define REACHED_TARGET 0
+// sDefault : state of changing default
+#define GOING_TO_DEFAULT 1
+#define NOT_RUNNING 0
 
 // Event states
 #define PLAY 1
@@ -54,14 +58,15 @@ char str[256];
 // Variables
 Servo myservo;  // create servo object to control a servo
 int vAmplitude = 15;
-int vPosServo = 0;       // position of the servo
-int vDefaultPosServo = 0; // target position of the servo
+int vPosServo = 0;       // true position of the servo
+int vDefaultPos = 0;     // target position of the servo
 int vDelay = 5;          // delay in ms between each rotation
 int vStep = 2;           // steps that the motor makes at every loop
 
 // States
-int sServo = 0; // state of servo
+int sMotion = 0; // state of servo
 int sWave = 0;
+int sDefault = 0;
 
 // Events
 int eWave = 0;
@@ -108,32 +113,25 @@ void setup() {
 
 void bangWave(OSCMessage &msg) {
   sWave = GOING_UP;
-  Serial.println("bang wave");
+}
+
+void updateDefaultPos(OSCMessage &msg) {
+  vDefaultPos = msg.getInt(0);
+  sMotion = FOLLOWING_TARGET;
 }
 
 void updateAmplitude(OSCMessage &msg) {
   vAmplitude = msg.getInt(0);
 }
-}
-
-void updateDefaultPosServo(OSCMessage &msg) {
-  vDefaultPosServo = msg.getInt(0);
-  followTarget(vDefaultPosServo);
-}
 
 void updateDelay(OSCMessage &msg) {
-  if (msg.isInt(0)) {
-    vDelay = msg.getInt(0);
-  }
+  vDelay = msg.getInt(0);
 }
 
 void updateStep(OSCMessage &msg) {
-  if (msg.isInt(0)) {
-    int receivedInt = msg.getInt(0);
-    vStep = receivedInt;
-  }
-  else {}
+  vStep = msg.getInt(0);
 }
+
 
 
 // **************** UTILITIES FUNCTIONS *************
@@ -146,31 +144,42 @@ void saveEventState() {
 
 ///////////////// MOTION FUNCTIONS /////////////////////
 
+void updatePos() {
+  if (sDefault == GOING_TO_DEFAULT) {
+    sMotion = followTarget(vDefaultPos);
+    if (sMotion == REACHED_TARGET) {
+      sDefault = NOT_RUNNING;
+    }
+  }
+}
+
+
 void updateWaveState() {
   if (sWave == GOING_UP) {
-    sServo = followTarget(vAmplitude);
-    if (sServo == REACHED_TARGET) {
+    sMotion = followTarget(vDefaultPos + vAmplitude);
+    if (sMotion == REACHED_TARGET) {
       sWave = GOING_DOWN;
     }
   }
 
   if (sWave == GOING_DOWN) {
-    sServo = followTarget(0);
-    if (sServo == REACHED_TARGET) {
+    sMotion = followTarget(vDefaultPos);
+    if (sMotion == REACHED_TARGET) {
       sWave = NOT_RUNNING;
     }
   }
 }
 
+// se rapproche d'une cible d'une step par loop (target)
 int followTarget(int target) {
-  if (abs(vPosServo - target) > vStep) {
-    if (vPosServo > target) {
+  if (abs(vPosServo - target) > vStep) { // faut-il bouger?
+    if (vPosServo > target) {   // dans quel sens
       vPosServo -= vStep;
     }
     else {
       vPosServo += vStep;
     }
-    myservo.write(vPosServo);
+    myservo.write(vPosServo);       // bouger
     delay(vDelay);
     return FOLLOWING_TARGET;
   }
@@ -194,7 +203,7 @@ void loop() {
     }
     if (!receivedMessage.hasError()) {
       receivedMessage.dispatch("/vAmplitude", updateAmplitude);
-      receivedMessage.dispatch("/vDefaultPosServo", updatePosServo);
+      receivedMessage.dispatch("/vDefaultPos", updateDefaultPos);
       receivedMessage.dispatch("/vDelay", updateDelay);
       receivedMessage.dispatch("/vStep", updateStep);
       receivedMessage.dispatch("/eWave", bangWave);
@@ -208,6 +217,7 @@ void loop() {
   }
 
   updateWaveState();
+  updatePos();
   saveEventState();
 }
 
