@@ -19,10 +19,12 @@
 #define D10 1
 
 // Connection variables
-char ssid[] = "WEARKIT";              // network name
-char pass[] = "twerkkkkkk";           // network password
-WiFiUDP Udp;                          // UDP instance
-const unsigned int localPort = 3333;  // local port to listen for UDP packets
+char ssid[] = "WEARKIT";                 // network name
+char pass[] = "twerkkkkkk";              // network password
+WiFiUDP Udp;                             // UDP instance
+const IPAddress outIp(255,255,255,255);  // destination IP (255.255.255.255 for broadcast)
+const unsigned int outPort = 3334;
+const unsigned int localPort = 3333;     // local port to listen for UDP packets
 OSCErrorCode error;
 
 // Data variables
