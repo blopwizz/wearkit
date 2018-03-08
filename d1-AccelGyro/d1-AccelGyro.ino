@@ -29,8 +29,8 @@ WiFiUDP Udp;                                // A UDP instance to let us send and
 //the Arduino's IP
 IPAddress ip(128, 32, 122, 252);
 //destination IP
-IPAddress outIp(192, 168, 1, 195);
-const unsigned int outPort = 9999;          // remote port to receive OSC
+IPAddress outIp(255, 255, 255, 255);
+const unsigned int outPort = 1111;          // remote port to receive OSC
 const unsigned int localPort = 8888;        // local port to listen for OSC packets (actually not used for sending)
 
 void setup() {
@@ -126,7 +126,7 @@ void loop() {
   Vector rawGyro = mpu.readRawGyro();
 
   rawAccel.XAxis = correction(rawAccel.XAxis);
-  rawAccel.YAxis = correction(rawAccel.YAxis);
+  rawAccel.YAxis = correction(rawAccel.YAxis); 
   rawAccel.ZAxis = correction(rawAccel.ZAxis);
   rawGyro.XAxis = correction(rawGyro.XAxis);
   rawGyro.YAxis = correction(rawGyro.YAxis);
@@ -153,5 +153,5 @@ void loop() {
   bundle.send(Udp);
   Udp.endPacket();
   bundle.empty();
-  delay(10);
+  delay(100);
 }
