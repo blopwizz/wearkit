@@ -113,15 +113,18 @@ void setup() {
 
 void bangWave(OSCMessage &msg) {
   sWave = GOING_UP;
+  Serial.println("bang wave");
 }
 
 void updateDefaultPos(OSCMessage &msg) {
   vDefaultPos = msg.getInt(0);
-  sMotion = FOLLOWING_TARGET;
+  sDefault = GOING_TO_DEFAULT;
+  Serial.println("pos");
 }
 
 void updateAmplitude(OSCMessage &msg) {
   vAmplitude = msg.getInt(0);
+  Serial.println("amplitude");
 }
 
 void updateDelay(OSCMessage &msg) {
