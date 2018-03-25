@@ -76,7 +76,6 @@ void updatePWM(OSCMessage &msg) {
 
 void runPWM() {
   if (vPWM != 0) {
-    Serial.println("in");
     digitalWrite(D5, HIGH);
     delayMicroseconds(vPWM * 10);
   }
