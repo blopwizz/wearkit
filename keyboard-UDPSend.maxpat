@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 56.0, 1406.0, 810.0 ],
+		"rect" : [ 34.0, 56.0, 1000.0, 810.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,58 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 192.0, 313.0, 29.5, 22.0 ],
+					"style" : "",
+					"text" : "2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 187.0, 227.0, 29.5, 22.0 ],
+					"style" : "",
+					"text" : "-80"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 182.0, 135.0, 29.5, 22.0 ],
+					"style" : "",
+					"text" : "1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 182.0, 27.0, 31.0, 22.0 ],
+					"style" : "",
+					"text" : "180"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-33",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -55,7 +107,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 438.0, 61.0, 22.0 ],
+					"patching_rect" : [ 240.0, 594.0, 61.0, 22.0 ],
 					"style" : "",
 					"text" : "/eWave 1"
 				}
@@ -68,7 +120,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 181.0, 438.0, 49.0, 22.0 ],
+					"patching_rect" : [ 181.0, 594.0, 49.0, 22.0 ],
 					"style" : "",
 					"text" : "sel 107"
 				}
@@ -80,7 +132,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 414.0, 293.0, 167.0, 22.0 ],
+					"patching_rect" : [ 414.0, 449.0, 167.0, 22.0 ],
 					"style" : "",
 					"text" : "udpsend 192.168.1.196 3333"
 				}
@@ -105,7 +157,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 386.0, 61.0, 22.0 ],
+					"patching_rect" : [ 240.0, 542.0, 61.0, 22.0 ],
 					"style" : "",
 					"text" : "/eWave 1"
 				}
@@ -118,7 +170,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 181.0, 386.0, 49.0, 22.0 ],
+					"patching_rect" : [ 181.0, 542.0, 49.0, 22.0 ],
 					"style" : "",
 					"text" : "sel 106"
 				}
@@ -131,7 +183,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 345.0, 61.0, 22.0 ],
+					"patching_rect" : [ 240.0, 501.0, 61.0, 22.0 ],
 					"style" : "",
 					"text" : "/eWave 1"
 				}
@@ -144,7 +196,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 181.0, 345.0, 49.0, 22.0 ],
+					"patching_rect" : [ 181.0, 501.0, 49.0, 22.0 ],
 					"style" : "",
 					"text" : "sel 104"
 				}
@@ -156,7 +208,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 414.0, 397.0, 167.0, 22.0 ],
+					"patching_rect" : [ 414.0, 553.0, 167.0, 22.0 ],
 					"style" : "",
 					"text" : "udpsend 192.168.1.199 3333"
 				}
@@ -169,7 +221,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 181.0, 293.0, 49.0, 22.0 ],
+					"patching_rect" : [ 181.0, 449.0, 49.0, 22.0 ],
 					"style" : "",
 					"text" : "sel 103"
 				}
@@ -182,7 +234,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 6.0, 297.0, 56.0, 60.0 ],
+					"patching_rect" : [ 6.0, 453.0, 56.0, 60.0 ],
 					"style" : "",
 					"text" : "G = 103\nH = 104\nI = 106 \nJ = 107"
 				}
@@ -195,7 +247,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "int", "int", "int" ],
-					"patching_rect" : [ 93.0, 293.0, 50.5, 22.0 ],
+					"patching_rect" : [ 93.0, 449.0, 50.5, 22.0 ],
 					"style" : "",
 					"text" : "key"
 				}
@@ -208,7 +260,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 293.0, 61.0, 22.0 ],
+					"patching_rect" : [ 240.0, 449.0, 61.0, 22.0 ],
 					"style" : "",
 					"text" : "/eWave 1"
 				}
@@ -222,7 +274,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 182.0, 211.0, 50.0, 22.0 ],
+					"patching_rect" : [ 181.0, 344.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -235,7 +287,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 182.0, 169.0, 50.0, 22.0 ],
+					"patching_rect" : [ 181.0, 259.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -246,7 +298,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 414.0, 442.0, 160.0, 22.0 ],
+					"patching_rect" : [ 414.0, 598.0, 160.0, 22.0 ],
 					"style" : "",
 					"text" : "udpsend 192.168.1.97 3333"
 				}
@@ -259,7 +311,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 211.0, 67.0, 22.0 ],
+					"patching_rect" : [ 239.0, 344.0, 67.0, 22.0 ],
 					"style" : "",
 					"text" : "/vDelay $1"
 				}
@@ -272,7 +324,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 169.0, 90.0, 22.0 ],
+					"patching_rect" : [ 239.0, 259.0, 90.0, 22.0 ],
 					"style" : "",
 					"text" : "/vAmplitude $1"
 				}
@@ -284,7 +336,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 414.0, 345.0, 160.0, 22.0 ],
+					"patching_rect" : [ 414.0, 501.0, 160.0, 22.0 ],
 					"style" : "",
 					"text" : "udpsend 192.168.1.89 3333"
 				}
@@ -300,7 +352,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 182.0, 125.0, 50.0, 22.0 ],
+					"patching_rect" : [ 182.0, 179.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -312,7 +364,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 125.0, 61.0, 22.0 ],
+					"patching_rect" : [ 240.0, 179.0, 61.0, 22.0 ],
 					"style" : "",
 					"text" : "/vStep $1"
 				}
@@ -349,6 +401,13 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
@@ -363,8 +422,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-45", 0 ],
 					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-17", 0 ]
 				}
 
 			}
@@ -391,7 +464,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-1", 0 ],
+					"order" : 5,
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
 					"order" : 1,
 					"source" : [ "obj-23", 0 ]
 				}
@@ -399,8 +480,24 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"order" : 0,
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"order" : 7,
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
-					"order" : 3,
+					"order" : 4,
 					"source" : [ "obj-23", 0 ]
 				}
 
@@ -416,7 +513,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"order" : 0,
+					"order" : 6,
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"order" : 3,
 					"source" : [ "obj-23", 0 ]
 				}
 
@@ -467,6 +572,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-56", 0 ],
 					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
