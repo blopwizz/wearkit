@@ -34,6 +34,8 @@ const unsigned int outPort = 1111;          // remote port to receive OSC
 const unsigned int localPort = 8888;        // local port to listen for OSC packets (actually not used for sending)
 
 void setup() {
+  pinMode(BUILTIN_LED, OUTPUT);
+  digitalWrite(BUILTIN_LED, HIGH);
   Serial.begin(115200);
 
   // Connect to WiFi network
