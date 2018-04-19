@@ -7,8 +7,8 @@
 #include <OSCData.h>
 
 // ************** USER CONSTANTS ********************
-#define N_SMOOTHING 20                                         // number of values for smoothing
-#define DELAY 3
+#define N_SMOOTHING 5                                        // number of values for smoothing
+#define DELAY 10
 // WiFi parameters
 char ssid[] = "WEARKIT";                             // network name
 char pass[] = "twerkkkkkk";                          // network password
