@@ -20,7 +20,7 @@ void connectWifi() {
   Serial.println("Starting UDP");
   Udp.begin(localPort);
   Serial.print("Local port: ");
-  Serial.println(localPort);
+  Serial.println(outPort);
 }
 
 
