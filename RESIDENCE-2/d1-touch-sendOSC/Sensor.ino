@@ -11,9 +11,9 @@ void readSensor() {
 }
 
 void printSensor() {
-//  Serial.print("0 ");
-//  Serial.print(vSensor);
-//  Serial.print(" ");
-//  Serial.print(vResistivity);
-//  Serial.println(" 1024");
+  Serial.print("0 ");
+  Serial.print(vSensor);
+  Serial.print(" ");
+  Serial.print(vResistivity);
+  Serial.println(" 1024");
 }
