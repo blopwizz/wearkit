@@ -15,7 +15,7 @@ char pass[] = "twerkkkkkk";                          // network password
 WiFiUDP Udp;                                         // A UDP instance to let us send and receive packets over UDP
 const unsigned int localPort = 3333;                 // local port to listen for UDP packets
 const IPAddress outIp(255, 255, 255, 255);           // remote IP of your computer
-const unsigned int outPort = 3336;                   // remote port to receive OSC
+const unsigned int outPort = 3337;                   // remote port to receive OSC
 
 // ************** USER VARIABLES ********************
 
