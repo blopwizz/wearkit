@@ -7,15 +7,19 @@
 #include <OSCData.h>
 
 // ************** USER CONSTANTS ********************
-#define N_SMOOTHING 5                                        // number of values for smoothing
-#define DELAY 10
+#define N_SMOOTHING 20                                         // number of values for smoothing
+#define DELAY 3
 // WiFi parameters
 char ssid[] = "WEARKIT";                             // network name
 char pass[] = "twerkkkkkk";                          // network password
 WiFiUDP Udp;                                         // A UDP instance to let us send and receive packets over UDP
 const unsigned int localPort = 3333;                 // local port to listen for UDP packets
 const IPAddress outIp(255, 255, 255, 255);           // remote IP of your computer
+<<<<<<< HEAD
 const unsigned int outPort = 3337;                   // remote port to receive OSC
+=======
+const unsigned int outPort = 3339;                   // remote port to receive OSC
+>>>>>>> d1962a9fdac40bfbdcf3720557dd0b800983a558
 
 // ************** USER VARIABLES ********************
 
