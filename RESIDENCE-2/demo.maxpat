@@ -43,7 +43,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 855.25, 354.0, 60.0, 22.0 ],
+					"patching_rect" : [ 856.25, 338.0, 60.0, 22.0 ],
 					"style" : "",
 					"text" : "loadbang"
 				}
@@ -56,7 +56,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 813.0, 486.0, 29.5, 22.0 ],
+					"patching_rect" : [ 814.0, 470.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "0"
 				}
@@ -69,7 +69,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 813.0, 455.0, 29.5, 22.0 ],
+					"patching_rect" : [ 814.0, 439.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "1"
 				}
@@ -82,7 +82,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 813.0, 422.0, 29.5, 22.0 ],
+					"patching_rect" : [ 814.0, 406.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "40"
 				}
@@ -95,7 +95,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 813.0, 390.0, 29.5, 22.0 ],
+					"patching_rect" : [ 814.0, 374.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "2"
 				}
@@ -108,7 +108,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 813.0, 354.0, 24.0, 24.0 ],
+					"patching_rect" : [ 814.0, 338.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -119,7 +119,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 813.0, 315.0, 150.0, 20.0 ],
+					"patching_rect" : [ 814.0, 299.0, 150.0, 20.0 ],
 					"style" : "",
 					"text" : "SERVO"
 				}
@@ -274,7 +274,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 855.25, 455.0, 50.0, 22.0 ],
+					"patching_rect" : [ 856.25, 439.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -286,7 +286,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 922.25, 455.0, 69.0, 22.0 ],
+					"patching_rect" : [ 923.25, 439.0, 69.0, 22.0 ],
 					"style" : "",
 					"text" : "/vStep $1"
 				}
@@ -302,7 +302,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 855.25, 390.0, 50.0, 22.0 ],
+					"patching_rect" : [ 856.25, 374.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -314,7 +314,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 922.25, 390.0, 67.0, 22.0 ],
+					"patching_rect" : [ 923.25, 374.0, 67.0, 22.0 ],
 					"style" : "",
 					"text" : "/vDelay $1"
 				}
@@ -330,7 +330,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 855.25, 422.0, 50.0, 22.0 ],
+					"patching_rect" : [ 856.25, 406.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -342,7 +342,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 922.25, 422.0, 90.0, 22.0 ],
+					"patching_rect" : [ 923.25, 406.0, 90.0, 22.0 ],
 					"style" : "",
 					"text" : "/vAmplitude $1"
 				}
@@ -355,7 +355,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 922.25, 486.0, 95.0, 22.0 ],
+					"patching_rect" : [ 923.25, 470.0, 95.0, 22.0 ],
 					"style" : "",
 					"text" : "/vDefaultPos $1"
 				}
@@ -371,7 +371,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 855.25, 486.0, 50.0, 22.0 ],
+					"patching_rect" : [ 856.25, 470.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -383,7 +383,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 855.25, 519.0, 61.0, 22.0 ],
+					"patching_rect" : [ 856.25, 503.0, 61.0, 22.0 ],
 					"style" : "",
 					"text" : "/eWave 1"
 				}
@@ -395,7 +395,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 922.25, 519.0, 167.0, 22.0 ],
+					"patching_rect" : [ 923.25, 503.0, 167.0, 22.0 ],
 					"style" : "",
 					"text" : "udpsend 192.168.1.200 3333"
 				}
